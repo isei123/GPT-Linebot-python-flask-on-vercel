@@ -43,9 +43,16 @@ def handle_message(event):
         working_status = True
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text="我可以說話囉，歡迎來跟我互動 ^_^ "))
+            TextSendMessage(text="我可以說話囉，歡迎來跟我互動 "))
         return
 
+    if event.message.text == "地址":
+        working_status = True
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text="台南市安南區本田路三段683巷40弄19號"))
+        return
+    
     if event.message.text == "閉嘴":
         working_status = False
         line_bot_api.reply_message(
