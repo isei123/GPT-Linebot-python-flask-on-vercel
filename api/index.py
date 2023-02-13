@@ -50,7 +50,7 @@ def handle_message(event):
         working_status = True
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text="台南市安南區本田路三段683巷40弄19號"))
+            TextSendMessage(text="台南市"))
         return
     
     if event.message.text == "閉嘴":
